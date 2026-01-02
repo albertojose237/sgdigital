@@ -79,21 +79,20 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-8 sm:py-10 md:py-12 bg-blue-50">
+    <section className="py-12 sm:py-16 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-6 sm:mb-8 md:mb-10 fade-in-observer">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-2 sm:mb-3 md:mb-4 animate-fade-in-down">
+        <div ref={headerRef} className="text-center mb-8 sm:mb-12 fade-in-observer">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-3 sm:mb-4 animate-fade-in-down">
             O Que Nossos Clientes Dizem
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-gray-700 px-2 max-w-2xl mx-auto animate-fade-in-up stagger-1">
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 px-2 max-w-2xl mx-auto animate-fade-in-up stagger-1">
             A confiança é a base do nosso sucesso. Veja como a SG Digital está transformando negócios em Angola
-            através do Marketing Digital e Soluções Tecnológicas.
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-10">
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className={`bounce-in-observer stagger-${(index % 6) + 1}`}>
               <TestimonialCard testimonial={testimonial} />

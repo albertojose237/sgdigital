@@ -18,11 +18,25 @@ export function Navigation() {
     { href: isServicePage ? "/#contato" : "#contato", label: "Contato" },
   ]
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault()
+    }
+    
     if (isServicePage && href.startsWith('/#')) {
       // Se estamos em página de serviço, redireciona para home com hash
-      window.location.href = href
+      const hashTarget = href.replace('/#', '')
+      window.location.href = `/#${hashTarget}`
+    } else if (!isServicePage && href.startsWith('#')) {
+      // Se estamos na página inicial, faz scroll suave
+      const elementId = href.replace('#', '')
+      const element = document.getElementById(elementId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+        window.history.pushState(null, "", href)
+      }
     }
+    
     setIsOpen(false)
   }
 
@@ -47,8 +61,8 @@ export function Navigation() {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-sm font-medium transition-colors text-gray-100 hover:text-orange-400"
+                  onClick={(e) => handleNavClick(item.href, e)}
+                  className="text-sm font-medium transition-colors text-gray-100 hover:text-orange-400 cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -80,10 +94,10 @@ export function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 text-gray-200 hover:bg-orange-500 hover:text-white border-l-4 border-transparent hover:border-orange-400 pl-5"
+                className="group px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 text-gray-200 hover:bg-orange-500 hover:text-white border-l-4 border-transparent hover:border-orange-400 pl-5 cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
-                onClick={() => {
-                  handleNavClick(item.href)
+                onClick={(e) => {
+                  handleNavClick(item.href, e)
                   setIsOpen(false)
                 }}
               >

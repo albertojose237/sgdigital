@@ -107,17 +107,17 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="servicos" className="py-8 sm:py-10 md:py-12 bg-white">
+    <section id="servicos" className="py-12 sm:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className="text-center mb-6 sm:mb-8 md:mb-10 fade-in-observer">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-2 sm:mb-3 md:mb-4 animate-fade-in-down">Nossos Serviços</h2>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 mb-3 sm:mb-4 md:mb-5 animate-fade-in-up stagger-1">
+        <div ref={headerRef} className="text-center mb-8 sm:mb-12 fade-in-observer">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-2 sm:mb-3 animate-fade-in-down">Nossos Serviços</h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 animate-fade-in-up stagger-1">
             Soluções personalizadas para impulsionar o seu negócio no ambiente digital.
           </p>
-          <div className="w-16 sm:w-20 md:w-24 h-1 bg-amber-500 mx-auto animate-scale-in stagger-2"></div>
+          <div className="w-16 sm:w-20 h-1 bg-amber-500 mx-auto animate-scale-in stagger-2"></div>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {services.map((service, index) => {
             // Determina a cor da borda e do gradiente baseado no índice
             const isBlueBorder = index % 2 === 1; // Índices 1, 3, 5 são azuis
@@ -133,7 +133,7 @@ export function ServicesSection() {
                 className={`fade-in-observer scale-in-observer ${staggerClass}`}
               >
                 <Link href={`/servicos/${service.id}`}>
-                  <div className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-60 sm:h-64 md:h-72 ${borderColor} cursor-pointer`}>
+                  <div className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-52 sm:h-56 md:h-64 ${borderColor} cursor-pointer`}>
                 {/* Image */}
                 <img
                   src={service.image || "/placeholder.svg"}

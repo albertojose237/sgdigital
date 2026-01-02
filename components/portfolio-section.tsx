@@ -87,20 +87,20 @@ export function PortfolioSection() {
   ]
 
   return (
-    <section id="portfolio" className="py-8 sm:py-10 md:py-12 bg-white">
+    <section id="portfolio" className="py-12 sm:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-6 sm:mb-8 md:mb-10 fade-in-observer">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-2 sm:mb-3 md:mb-4 animate-fade-in-down">
+        <div ref={headerRef} className="text-center mb-8 sm:mb-12 fade-in-observer">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 sm:mb-4 animate-fade-in-down">
             Projetos Realizados
           </h2>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 animate-fade-in-up stagger-1">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 animate-fade-in-up stagger-1">
             Histórias de sucesso e inovação digital em Angola.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-10">
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
           {projects.map((project, index) => (
             <div key={index} className={`fade-in-observer scale-in-observer stagger-${(index % 6) + 1}`}>
               <ProjectCard key={index} project={project} isHighlighted={false} />
@@ -110,7 +110,7 @@ export function PortfolioSection() {
 
         {/* Load More Button */}
         <div className="text-center">
-          <button className="bg-amber-500 hover:bg-amber-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm md:text-base cursor-pointer">
+          <button className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors text-sm sm:text-base cursor-pointer">
             Carregar Mais Projetos
           </button>
         </div>

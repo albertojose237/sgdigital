@@ -7,10 +7,12 @@ import { PortfolioSection } from "@/components/portfolio-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ContactSection } from "@/components/contact-section"
 import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
+import { HashNavigationHandler } from "@/components/hash-navigation-handler"
 
 export default function Home() {
   return (
     <>
+      <HashNavigationHandler />
       <Navigation />
       <HeroSection />
       <AboutSection />
