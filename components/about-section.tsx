@@ -46,7 +46,7 @@ export function AboutSection() {
           <div ref={imageRef} className="relative h-56 sm:h-72 md:h-125 lg:h-150 order-2 lg:order-1 rounded-2xl overflow-hidden group fade-in-observer slide-left-observer">
             <img
               src="/business-team-professional-office-discussion-analy.jpg"
-              alt="Equipa FG Digital trabalhando"
+              alt="Equipa SG Digital trabalhando"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             {/* Gradient overlay similar ao dos cards de serviços */}
@@ -60,9 +60,9 @@ export function AboutSection() {
           {/* Right: White card with content - overlapping the image */}
           <div ref={cardRef} className="lg:-ml-16 relative z-10 order-1 lg:order-2 fade-in-observer slide-right-observer">
             <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2 sm:mb-3 md:mb-4">Sobre a FG Digital</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2 sm:mb-3 md:mb-4">Sobre a SG Digital</h2>
               <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-3 sm:mb-4 md:mb-6">
-                Somos a FG Digital, a sua parceira estratégica em Marketing Digital e Soluções Tecnológicas em Angola.
+                Somos a SG Digital, a sua parceira estratégica em Marketing Digital e Soluções Tecnológicas em Angola.
                 Nossa paixão é transformar desafios em oportunidades digitais, impulsionando o crescimento de empresas
                 com estratégias personalizadas e tecnologia de ponta. Combinamos expertise global com profundo
                 conhecimento do mercado angolano para entregar resultados reais e duradouros. Comprometidos com a

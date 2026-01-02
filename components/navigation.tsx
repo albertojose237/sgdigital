@@ -3,17 +3,28 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+  const isServicePage = pathname.startsWith('/servicos/')
 
   const navItems = [
-    { href: "#home", label: "Início" },
-    { href: "#sobre", label: "Sobre" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#portfolio", label: "Portfólio" },
-    { href: "#contato", label: "Contato" },
+    { href: isServicePage ? "/#home" : "#home", label: "Início" },
+    { href: isServicePage ? "/#sobre" : "#sobre", label: "Sobre" },
+    { href: isServicePage ? "/#servicos" : "#servicos", label: "Serviços" },
+    { href: isServicePage ? "/#portfolio" : "#portfolio", label: "Portfólio" },
+    { href: isServicePage ? "/#contato" : "#contato", label: "Contato" },
   ]
+
+  const handleNavClick = (href: string) => {
+    if (isServicePage && href.startsWith('/#')) {
+      // Se estamos em página de serviço, redireciona para home com hash
+      window.location.href = href
+    }
+    setIsOpen(false)
+  }
 
   return (
     <>
@@ -22,10 +33,10 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="#home" className="flex items-center gap-2 font-bold text-lg sm:text-xl text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/" className="flex items-center gap-2 font-bold text-lg sm:text-xl text-white" onClick={() => setIsOpen(false)}>
               <img 
                 src="/logo.png" 
-                alt="FG Digital Logo" 
+                alt="SG Digital Logo" 
                 className="h-8 sm:h-10 w-auto"
               />
             </Link>
@@ -36,6 +47,7 @@ export function Navigation() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={() => handleNavClick(item.href)}
                   className="text-sm font-medium transition-colors text-gray-100 hover:text-orange-400"
                 >
                   {item.label}
@@ -70,7 +82,10 @@ export function Navigation() {
                 href={item.href}
                 className="group px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 text-gray-200 hover:bg-orange-500 hover:text-white border-l-4 border-transparent hover:border-orange-400 pl-5"
                 style={{ animationDelay: `${index * 50}ms` }}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  handleNavClick(item.href)
+                  setIsOpen(false)
+                }}
               >
                 {item.label}
               </a>
@@ -95,21 +110,6 @@ export function Navigation() {
           onClick={() => setIsOpen(false)}
         ></div>
       )}
-
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/244951077107"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40  rounded-full flex items-center justify-center transition-all duration-300 group cursor-pointer"
-        aria-label="WhatsApp"
-      >
-        <img 
-          src="whatsapp.webp"
-          alt="WhatsApp"
-          className="w-24 h-24"
-        />
-      </a>
     </>
   )
 }

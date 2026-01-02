@@ -87,7 +87,7 @@ export function TestimonialsSection() {
             O Que Nossos Clientes Dizem
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-700 px-2 max-w-2xl mx-auto animate-fade-in-up stagger-1">
-            A confiança é a base do nosso sucesso. Veja como a FG Digital está transformando negócios em Angola
+            A confiança é a base do nosso sucesso. Veja como a SG Digital está transformando negócios em Angola
             através do Marketing Digital e Soluções Tecnológicas.
           </p>
         </div>

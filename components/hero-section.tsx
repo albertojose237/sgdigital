@@ -47,7 +47,7 @@ export function HeroSection() {
           <div className="relative h-48 sm:h-56 md:h-64 lg:h-97.5 animate-fade-in-right">
             <img
               src="/professional-team-digital-marketing-meeting.jpg"
-              alt="Equipa FG Digital em reunião de trabalho"
+              alt="Equipa SG Digital em reunião de trabalho"
               className="w-full h-full object-cover rounded-2xl shadow-2xl"
             />
           </div>

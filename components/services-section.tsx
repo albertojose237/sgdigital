@@ -1,13 +1,23 @@
 "use client"
 
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
+import Link from "next/link"
+
+interface Service {
+  id: string
+  title: string
+  description: string
+  image: string
+  icon: string
+}
 
 export function ServicesSection() {
   const headerRef = useIntersectionObserver()
   const cardsRef = useIntersectionObserver()
   
-  const services = [
+  const services: Service[] = [
     {
+      id: "web-development",
       title: "Desenvolvimento de Sites",
       description:
         "Criação de sites profissionais, responsivos e otimizados para SEO, focados em resultados e experiência do usuário.",
@@ -15,6 +25,7 @@ export function ServicesSection() {
       icon: "code",
     },
     {
+      id: "web-systems",
       title: "Sistemas Web",
       description:
         "Desenvolvimento de sistemas personalizados e integrados para automatizar processos e melhorar a gestão empresarial.",
@@ -22,24 +33,28 @@ export function ServicesSection() {
       icon: "chart",
     },
     {
+      id: "ecommerce",
       title: "Lojas Virtuais",
       description: "Plataformas de e-commerce seguras e intuitivas para expandir suas vendas online com facilidade.",
       image: "/team-shopping-ecommerce-online-store.jpg",
       icon: "cart",
     },
     {
+      id: "landing-pages",
       title: "Landing Pages",
       description: "Páginas de alta conversão projetadas para capturar leads e maximizar suas campanhas de marketing.",
       image: "/design-team-creative-meeting-multicolor.jpg",
       icon: "rocket",
     },
     {
+      id: "design-multimedia",
       title: "Design & Multimídia",
       description: "Criação de identidade visual, flyers, logotipos, edição de vídeo e motion design impactantes.",
       image: "/designer-working-on-color-palette-tablet.jpg",
       icon: "palette",
     },
     {
+      id: "branding-social",
       title: "Branding & Social Media",
       description:
         "Gestão estratégica da sua marca e presença online para engajar e construir relacionamentos com seu público.",
@@ -114,10 +129,11 @@ export function ServicesSection() {
             
             return (
               <div
-                key={index}
+                key={service.id}
                 className={`fade-in-observer scale-in-observer ${staggerClass}`}
               >
-                <div className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-60 sm:h-64 md:h-72 ${borderColor}`}>
+                <Link href={`/servicos/${service.id}`}>
+                  <div className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-60 sm:h-64 md:h-72 ${borderColor} cursor-pointer`}>
                 {/* Image */}
                 <img
                   src={service.image || "/placeholder.svg"}
@@ -140,7 +156,8 @@ export function ServicesSection() {
                   <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1 sm:mb-2">{service.title}</h3>
                   <p className="text-xs sm:text-sm leading-relaxed line-clamp-2">{service.description}</p>
                 </div>
-                </div>
+                  </div>
+                </Link>
               </div>
             )
           })}

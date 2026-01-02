@@ -29,7 +29,7 @@ export function ContactSection() {
           <div ref={leftRef} className="flex flex-col justify-start space-y-6 md:space-y-8 fade-in-observer slide-left-observer">
             <img 
               src="https://imgs.search.brave.com/HAUm5vsU4FDqPwoGfQe_-sZt1WGLI_AmHLVjkGXnEcE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ0/MTM1MTA5NC9waG90/by9jYWxsLWNlbnRl/ci10ZWxlbWFya2V0/aW5nLWFuZC1jdXN0/b21lci1zZXJ2aWNl/LXdpdGgtYS1idXNp/bmVzcy1tYW4td29y/a2luZy1pbi1hbi1v/ZmZpY2UtYW5kLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0y/cGRrZ0pacEFaRVFa/akg4Y1QwdnJHUjVE/Z1poMzhDYWhDT1dO/c0N1NWd3PQ" 
-              alt="Consultora FG Digital" 
+              alt="Consultora SG Digital" 
               className="w-full h-48 sm:h-64 md:h-72 rounded-2xl shadow-lg object-cover animate-scale-in" 
             />
 
