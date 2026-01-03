@@ -114,3 +114,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Prevent horizontal scrolling caused by overflowing elements on small screens */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

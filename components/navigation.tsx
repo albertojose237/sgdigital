@@ -51,7 +51,7 @@ export function Navigation() {
               <img 
                 src="/logo.png" 
                 alt="SG Digital Logo" 
-                className="h-8 sm:h-10 w-auto"
+                className="h-8 sm:h-10 w-auto max-w-full block"
               />
             </Link>
 

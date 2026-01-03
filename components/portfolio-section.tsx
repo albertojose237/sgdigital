@@ -64,26 +64,38 @@ function ProjectCard({ project, isHighlighted }: ProjectCardProps) {
 export function PortfolioSection() {
   const headerRef = useIntersectionObserver()
   const cardsRef = useIntersectionObserver()
-
+  
   const projects: Project[] = [
     {
-      title: "Banco Nacional de Angola",
-      category: "Transformação Digital & App Móvel",
-      image: "/business-meeting-digital-transformation-technology.jpg",
-      link: "https://www.bna.ao",
+      title: "VP Artes-88",
+      category: "Soluções industriais robustas para desafios complexos. Especialistas em soldadura de alta precisão, fabricação estrutural e manutenção preventiva.",
+      image: "/vpartes.png",
+      link: "https://vpartes.vercel.app",
     },
     {
-      title: "Sonangol",
-      category: "Gestão de Mídias Sociais & Conteúdo",
-      image: "/woman-professional-working-with-tablet-analytics.jpg",
-      link: "https://www.sonangol.co.ao",
+      title: "Goias Play",
+      category: "Colete feedback, analise resultados e tome decisões informadas com a plataforma de pesquisas mais intuitiva do mercado.",
+      image: "/goiasplay.png",
+      link: "https://www.goiasplay.com",
     },
     {
-      title: "Unitel",
-      category: "Campanha de Marketing Digital & SEO",
-      image: "/team-professionals-discussing-project-analytics-da.jpg",
-      link: "https://www.unitel.ao",
-    }
+      title: "Danela Soft",
+      category: "Centralize agendamentos, clientes, finanças e serviços numa única plataforma. Tenha controlo total e tome decisões com base em dados precisos.",
+      image: "/danela.png",
+      link: "https://danelasoft.vercel.app",
+    },
+    {
+      title: "Treinix Solutions",
+      category: "Sistema Completo de Gestão para Centros de Formação. Gerencie alunos, cursos, instrutores e finanças de forma eficiente e integrada.",
+      image: "/treinix.png",
+      link: "https://treinix.vercel.app",
+    },
+    {
+      title: "SG Digital",
+      category: "A SG Digital é especialista em Marketing Digital e Soluções Tecnológicas para impulsionar sua empresa em Angola. Transforme sua presença online e alcance resultados reais.",
+      image: "/sgdigital.png",
+      link: "https://sgdigital.vercel.app",
+    },
   ]
 
   return (
