@@ -39,7 +39,7 @@ export function ContactSection() {
                   <Phone size={18} className="text-orange-500" />
                   Telefone / WhatsApp
                 </h3>
-                <p className="text-lg sm:text-xl font-bold text-blue-900">+244 923 456 789</p>
+                <p className="text-lg sm:text-xl font-bold text-blue-900">+244 933 781 943</p>
               </div>
 
               <div>
