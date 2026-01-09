@@ -41,6 +41,14 @@ export function ContactSection() {
                 </h3>
                 <p className="text-lg sm:text-xl font-bold text-blue-900">+244 933 781 943</p>
               </div>
+                  <Phone size={18} className="text-orange-500" />
+                  Telefone / WhatsApp
+                </h3>
+                <p className="text-lg sm:text-xl font-bold text-blue-900">+244 933 909 072</p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
 
               <div>
                 <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
